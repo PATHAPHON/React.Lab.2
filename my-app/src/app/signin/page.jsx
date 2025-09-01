@@ -114,8 +114,6 @@ export default function RegisterPage() {
       setEmailError("");
     } else if (!email.includes("@")) {
       setEmailError("อีเมลต้องมีเครื่องหมาย @");
-    } else {
-      setEmailError("");
     }
   }, [email]);
 
@@ -130,7 +128,7 @@ export default function RegisterPage() {
     if (!hasMin) setPasswordError("รหัสผ่านต้องมีอย่างน้อย 8 ตัวอักษร");
     else if (!hasLetter || !hasNumber)
       setPasswordError("รหัสผ่านต้องประกอบด้วยตัวอักษรและตัวเลข");
-    else setPasswordError("");
+    else;   
   }, [password]);
 
   function validateDob(value) {
